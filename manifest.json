@@ -19,8 +19,7 @@
     "newtab": "index.html"
   },
   "permissions": [
-    "bookmarks",
-    "search"
+    "bookmarks"
   ],
   "content_scripts": [
     {
