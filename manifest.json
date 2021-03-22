@@ -1,11 +1,10 @@
 {
   "name": "Hello Extensions",
-  "description" : "Base Level Extension",
+  "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "hello.html"
   },
   "commands": {
     "_execute_browser_action": {
@@ -15,6 +14,40 @@
       },
       "description": "Opens hello.html"
     }
-  }
-
+  },
+  "chrome_url_overrides": {
+    "newtab": "hello.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "history",
+    "tabs",
+    "unlimitedStorage",
+    "activeTab",
+    "alarms",
+    "background",
+    "browsingData",
+    "clipboardRead",
+    "clipboardWrite",
+    "cookies",
+    "desktopCapture",
+    "downloads",
+    "fontSettings",
+    "management",
+    "privacy",
+    "search",
+    "storage",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ]
 }
