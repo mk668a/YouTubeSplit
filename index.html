@@ -7,12 +7,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>chrome-easy-bookmarks</title>
   <script src="script.js"></script>
+  <style type="text/css">
+    #main {
+      margin: 0 40px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    #BookmarkList {
+      margin-top: 24px;
+      max-height: 80vh;
+      overflow-y: scroll;
+      border: 1px solid gray;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    input {
+      height: 24px;
+      width: 240px;
+      font-size: 18px;
+    }
+
+    h1 {
+      margin: auto 8px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    li a {
+      font-size: 18px;
+    }
+
+    li img {
+      height: 18px;
+      width: 18px;
+      margin-right: 8px;
+    }
+  </style>
 </head>
 
 <body>
   <div id="main">
-    <input id="input" value="" onChange="searchBookmark(e)"></input>
-    <div id="BookmarkList"></div>
+    <!-- <div class="flex"> -->
+    <div class="bookmarks">
+      <label class="flex">
+        <h1>bookmark search</h1><input id="input" value="" onChange="searchBookmark(e)"></input>
+      </label>
+      <div id="BookmarkList"></div>
+    </div>
+    <!-- </div> -->
   </div>
 </body>
 

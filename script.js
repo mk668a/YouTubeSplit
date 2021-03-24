@@ -1,12 +1,7 @@
 window.onload = function () {
+  // console.log("start extension");
 
-  // title.value = browser.bookmarks
-
-  console.log("start extension");
-
-  const input = document.getElementById('input');
-  const log = document.getElementById('log');
-
+  // urlからドメイン名を返す関数
   function getDomainName(url) {
     var host_domain;
 
@@ -53,6 +48,7 @@ window.onload = function () {
   });
 
   // ********** 検索 **********
+  const input = document.getElementById('input');
   input.addEventListener('change', updateValue);
 
   function updateValue(e) {
