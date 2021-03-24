@@ -37,15 +37,26 @@
 
     ul {
       padding: 0;
+      display: flex;
+      flex-wrap: wrap;
       margin: 0;
     }
 
     li {
       list-style-type: none;
+      margin: 4px;
     }
 
     li a {
+      display: block;
+      width: 100%;
       font-size: 18px;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    li a:hover {
+      background-color: rgb(228, 228, 228);
     }
 
     li img {
@@ -61,7 +72,7 @@
     <!-- <div class="flex"> -->
     <div class="bookmarks">
       <label class="flex">
-        <h1>bookmark search</h1><input id="input" value="" onChange="searchBookmark(e)"></input>
+        <h1>bookmark search</h1><input id="input" value="" onChange="searchBookmark(e)" autofocus></input>
       </label>
       <div id="BookmarkList"></div>
     </div>
