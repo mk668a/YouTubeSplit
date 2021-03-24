@@ -33,7 +33,7 @@ window.onload = function () {
         // 新しいulを作ってliに入れる
         node.children.forEach(parser);
       } else if (node.url) {
-        listItem.innerHTML = `<img src="http://www.google.com/s2/favicons?domain=${getDomainName(node.url)}"/><a href="${node.url}">${node.title}</a>`
+        listItem.innerHTML = `<a href="${node.url}"><img src="http://www.google.com/s2/favicons?domain=${getDomainName(node.url)}"/>${node.title}</a>`
         unorderedList.appendChild(listItem)
         bookmarks.push(node);
       }
@@ -68,7 +68,7 @@ window.onload = function () {
         if (node.url) {
           // create new li
           const listItem = document.createElement("li");
-          listItem.innerHTML = `<img src="http://www.google.com/s2/favicons?domain=${getDomainName(node.url)}"/><a href="${node.url}">${node.title}</a>`
+          listItem.innerHTML = `<a href="${node.url}"><img src="http://www.google.com/s2/favicons?domain=${getDomainName(node.url)}"/>${node.title}</a>`
           unorderedList.appendChild(listItem)
         }
       })
